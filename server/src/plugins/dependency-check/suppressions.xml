@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.1.xsd">
 
-    <!-- as of 2.1.0 there were no supressions requires -->
+    <!-- as of 2.1.0 there were no suppression rules requires -->
 
 </suppressions>
