@@ -18,14 +18,14 @@ jobs:
       - run: mvn package -DskipTests dependency:go-offline
 
       - save_cache:
-        key: m2-{{ checksum "pom.xml" }}
-        paths:
-          - ~/.m2
+          key: m2-{{ checksum "pom.xml" }}
+          paths:
+            - ~/.m2
 
       - run: mvn package
 
       - store_test_results:
-        path: server/target/surefire-reports
+          path: server/target/surefire-reports
 
       - store_artifacts:
-        path: client/target/client-0.0.1-SNAPSHOT.jar
+          path: client/target/client-0.0.1-SNAPSHOT.jar
