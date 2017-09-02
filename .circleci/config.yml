@@ -24,7 +24,7 @@ jobs:
             - ~/.m2
           key: spring-boot-ng-{{ checksum "pom.xml" }}
 
-      - run: mvn verify
+      - run: mvn package
 
       - store_test_results:
           path: server/target/surefire-reports
