@@ -1,18 +1,21 @@
 version: 2
 jobs:
   build:
-
-    working_directory: ~/spring-boot-ng
-
     docker:
       - image: circleci/openjdk:8-jdk-browsers
 
-    steps:
+    working_directory: ~/spring-boot-ng
 
+    environment:
+      MAVEN_OPTS: -Xmx3200m
+
+    steps:
       - checkout
 
       - restore_cache:
-          key: spring-boot-ng-{{ checksum "pom.xml" }}
+          keys:
+          - spring-boot-ng-{{ checksum "pom.xml" }}
+          - spring-boot-ng-
 
       - run: mvn dependency:go-offline
 
@@ -25,6 +28,3 @@ jobs:
 
       - store_test_results:
           path: server/target/surefire-reports
-
-      - store_artifacts:
-          path: server/target/server-0.0.1-SNAPSHOT.jar
