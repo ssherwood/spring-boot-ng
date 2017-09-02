@@ -11,16 +11,18 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: spring-boot-ng-{{ checksum "pom.xml" }}
+          keys:
+            - m2-{{ checksum "pom.xml" }}
+            - m2-
 
-      - run: mvn dependency:go-offline
+      - run: mvn package -DskipTests dependency:go-offline
 
       - save_cache:
+          key: m2-{{ checksum "pom.xml" }}
           paths:
             - ~/.m2
-          key: spring-boot-ng-{{ checksum "pom.xml" }}
 
-      - run: mvn install
+      - run: mvn verify
 
       - store_test_results:
           path: server/target/surefire-reports
