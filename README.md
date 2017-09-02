@@ -5,31 +5,33 @@ serve an [Angular](https://angular.io/) frontend.
 
 ## Overview
 
-This project is a simple starter using Spring Boot and Angular.  The project
-relies on a Maven "multi module" layout to package both the client and server
-assets independently.
+This project is a simple starter using Spring Boot with Angular.  The
+project relies on a basic [Maven](https://maven.apache.org/) multi module
+layout to package both the client and server assets independently (this can
+easily be done with Gradle if desired).
 
-The client code was generated using the [Angular CLI](https://cli.angular.io/)
+The Angular client code was initially generated using the [Angular CLI](https://cli.angular.io/)
 and can largely be treated as a standard CLI project when developing locally
-(meaning using the appropriate CLI and Node tooling).  Running the client via
-`ng serve` is expected when doing any frontend development.
+(meaning using the CLI).  Running the client via `ng serve` is the expected way
+of working when doing any frontend development.
 
-When running in this mode, the `proxy.conf.json` configuration is used to route
-any backend calls through to the Spring Boot application running on port :8080
-to avoid [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-issues.  This practice also helps reduce "lag" when developing both frontend
-and backend together.
+When running the frontend in node, the [proxy.conf.json](client/proxy.conf.json)
+configuration is used to route backend calls through to the Spring Boot
+application running on [8080](http://localhost:8080) - primarily to avoid any
+[CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) issues.
+This practice can also reduce compile "lag" when developing both frontend and
+backend together.
 
-Additionally, the client pom uses the [frontend maven plugin](https://github.com/eirslett/frontend-maven-plugin)
+To make this work seamlessly, the client pom uses the [frontend maven plugin](https://github.com/eirslett/frontend-maven-plugin)
 to attach the Angular build to the overall Maven lifecycle.  In effect, this
-lets Maven package the resulting `dist` folder into the `jar` as static
-content.  In addition to compile, `lint` and `e2e` tests are attached to the
+lets Maven package the resulting `dist` folder into the client `jar` as static
+content.  In addition to the compile, `lint` and `e2e` scripts are attached to the
 Maven `compile` and `integration-test` phases respectively.
 
-Once the project is fully built, the Spring Boot "fat jar" will contain the
-Angular static resources and act as if they had been copied into the
-`src/main/resources/static` folder.  The resulting client jar may also be used
-to deploy the static bundles to edge server cache/CDN as desired.
+When the project is packaged, the resulting Spring Boot executable ['fat' JAR](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-build.html#howto-create-an-executable-jar-with-maven)
+will contain the Angular bundles and act as if they had been copied into the
+`src/main/resources/static` folder.  The client jar may also be used to
+transfer and unpack the static bundles to edge cache/CDN (as desired).
 
 ## Getting Started
 
@@ -51,6 +53,8 @@ this problem will not occur.
 ## TODO
 
 - Add UI routing
+- Add support for Bootstrap
+- Add a sample frontend -> backend call
 - Add Spring Data example
-- Add Spring Security (OAuth2)
+- Add Spring Security using OAuth2
 - 
