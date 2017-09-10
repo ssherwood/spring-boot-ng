@@ -9,13 +9,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - m2-cache-{{ checksum "pom.xml" }}-{{ checksum "client/package.json" }}
-            - m2-cache-
+            - m2-cache-{{ checksum "pom.xml" }}-{{ checksum "client/pom.xml" }}-{{ checksum "server/pom.xml" }}
       - run: mvn --fail-never dependency:go-offline
       - save_cache:
-          key: m2-cache-{{ checksum "pom.xml" }}-{{ checksum "client/package.json" }}
+          key: m2-cache-{{ checksum "pom.xml" }}-{{ checksum "client/pom.xml" }}-{{ checksum "server/pom.xml" }}
           paths:
             - ~/.m2
+            - ~/.cache
       - run: mvn package
       - store_test_results:
           path: server/target/surefire-reports
