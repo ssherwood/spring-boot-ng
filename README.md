@@ -1,5 +1,8 @@
 # Spring Boot with Angular Starter
 
+[![Build Status](https://circleci.com/gh/ssherwood/spring-boot-ng/tree/master.svg?style=shield)](https://circleci.com/gh/ssherwood/spring-boot-ng)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+
 Sample project using [Spring Boot](https://projects.spring.io/spring-boot/) to
 serve an [Angular](https://angular.io/) frontend.
 
