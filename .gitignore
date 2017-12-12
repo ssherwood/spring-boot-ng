@@ -18,6 +18,8 @@ node_modules/
 *.launch
 .settings/
 *.sublime-workspace
+.sts4-cache/
+.vscode
 
 ### IntelliJ IDEA ###
 .idea

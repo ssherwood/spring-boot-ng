@@ -12,7 +12,7 @@
     <parent>
         <groupId>io.spring.platform</groupId>
         <artifactId>platform-bom</artifactId>
-        <version>Brussels-SR4</version>
+        <version>Brussels-SR6</version>
         <relativePath/>
     </parent>
 
@@ -21,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-cloud.version>Dalston.SR2</spring-cloud.version>
+        <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
     </properties>
 
     <!-- -->
