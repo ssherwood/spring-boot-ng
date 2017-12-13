@@ -19,9 +19,9 @@
   <properties>
     <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
     <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
-    <frontend-maven-plugin.version>1.5</frontend-maven-plugin.version>
-    <nodejs.version>v6.11.2</nodejs.version>
-    <yarn.version>v0.27.5</yarn.version>
+    <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+    <nodejs.version>v8.9.3</nodejs.version>
+    <yarn.version>v1.3.2</yarn.version>
     <outDir>dist</outDir>
   </properties>
 
@@ -56,6 +56,15 @@
               <goal>yarn</goal>
             </goals>
           </execution>
+<!--
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+              <goal>npm</goal>
+            </goals>
+          </execution>
+-->
           <!-- -->
           <execution>
             <id>ng lint</id>
