@@ -5,24 +5,32 @@
 
     <suppress>
         <notes><![CDATA[
-        file name: tomcat-annotations-api-8.5.23.jar
-        ]]></notes>
+   file name: client-0.0.1-SNAPSHOT.jar
+   ]]></notes>
+        <gav regex="true">^io\.undertree\.boot-ng:client:.*$</gav>
+        <cve>CVE-2016-9878</cve>
+    </suppress>
+
+    <suppress>
+        <notes><![CDATA[
+   file name: tomcat-annotations-api-8.5.27.jar
+   ]]></notes>
         <gav regex="true">^org\.apache\.tomcat:tomcat-annotations-api:.*$</gav>
         <cve>CVE-2016-5425</cve>
     </suppress>
 
     <suppress>
         <notes><![CDATA[
-        file name: tomcat-annotations-api-8.5.23.jar
-        ]]></notes>
+   file name: tomcat-annotations-api-8.5.27.jar
+   ]]></notes>
         <gav regex="true">^org\.apache\.tomcat:tomcat-annotations-api:.*$</gav>
         <cve>CVE-2016-6325</cve>
     </suppress>
 
     <suppress>
         <notes><![CDATA[
-        file name: tomcat-annotations-api-8.5.23.jar
-        ]]></notes>
+   file name: tomcat-annotations-api-8.5.27.jar
+   ]]></notes>
         <gav regex="true">^org\.apache\.tomcat:tomcat-annotations-api:.*$</gav>
         <cve>CVE-2017-6056</cve>
     </suppress>
