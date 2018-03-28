@@ -20,8 +20,8 @@
     <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
     <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
     <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
-    <nodejs.version>v8.10.0</nodejs.version>
-    <yarn.version>v1.5.1</yarn.version>
+    <nodejs.version>v8.9.3</nodejs.version>
+    <yarn.version>v1.3.2</yarn.version>
     <outDir>dist</outDir>
   </properties>
 
@@ -49,7 +49,6 @@
           <yarnVersion>${yarn.version}</yarnVersion>
         </configuration>
         <executions>
-          <!--
           <execution>
             <id>install node and yarn</id>
             <goals>
@@ -57,7 +56,7 @@
               <goal>yarn</goal>
             </goals>
           </execution>
-          -->
+<!--
           <execution>
             <id>install node and npm</id>
             <goals>
@@ -65,12 +64,13 @@
               <goal>npm</goal>
             </goals>
           </execution>
+-->
           <!-- -->
           <execution>
             <id>ng lint</id>
             <phase>compile</phase>
             <goals>
-              <goal>npm</goal>
+              <goal>yarn</goal>
             </goals>
             <configuration>
               <arguments>run lint</arguments>
@@ -81,10 +81,10 @@
             <id>ng build</id>
             <phase>compile</phase>
             <goals>
-              <goal>npm</goal>
+              <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>run build</arguments>
+              <arguments>${ng.build.arguments}</arguments>
             </configuration>
           </execution>
           <!-- -->
@@ -92,7 +92,7 @@
             <id>ng e2e</id>
             <phase>integration-test</phase>
             <goals>
-              <goal>npm</goal>
+              <goal>yarn</goal>
             </goals>
             <configuration>
               <arguments>run e2e</arguments>
@@ -132,4 +132,23 @@
       </plugin>
     </plugins>
   </build>
+
+  <!-- Profiles -->
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <ng.build.arguments>run build</ng.build.arguments>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <ng.build.arguments>run prod</ng.build.arguments>
+      </properties>
+    </profile>
+  </profiles>
 </project>
