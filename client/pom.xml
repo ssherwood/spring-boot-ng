@@ -20,8 +20,8 @@
     <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
     <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
     <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
-    <nodejs.version>v8.9.3</nodejs.version>
-    <yarn.version>v1.3.2</yarn.version>
+    <nodejs.version>v8.11.1</nodejs.version>
+    <yarn.version>v1.5.1</yarn.version>
     <outDir>dist</outDir>
   </properties>
 
