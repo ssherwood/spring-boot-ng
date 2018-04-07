@@ -1,7 +1,9 @@
 # Spring Boot with Angular Starter
 
-[![Build Status](https://circleci.com/gh/ssherwood/spring-boot-ng/tree/master.svg?style=shield)](https://circleci.com/gh/ssherwood/spring-boot-ng)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://circleci.com/gh/ssherwood/spring-boot-ng/tree/master.svg?style=shield)](https://circleci.com/gh/ssherwood/spring-boot-ng)
+[![Known Vulnerabilities (Server)](https://snyk.io/test/github/ssherwood/spring-boot-ng/badge.svg?targetFile=/server/pom.xml)](https://snyk.io/test/github/ssherwood/spring-boot-ng?targetFile=/server/pom.xml)
+[![Known Vulnerabilities (Client)](https://snyk.io/test/github/ssherwood/spring-boot-ng/badge.svg?targetFile=/client/package.json)](https://snyk.io/org/ssherwood/project/defd3bbe-6c49-4a5b-ae9d-d748fcbf07a2)
 
 Sample project using [Spring Boot](https://projects.spring.io/spring-boot/) to
 serve an [Angular](https://angular.io/) frontend.
