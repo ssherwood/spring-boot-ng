@@ -54,7 +54,7 @@ this file in order to add it to the application classpath.  This problem is
 frequently the result of a manual `mvn clean`.
 
 To fix this issue, perform a `mvn package` on the client and restart the
-application.  NOTE: if you run the frontend via node and use http://localhost:4200
+application.  NOTE: if you run the frontend via node (usually recommended) and use http://localhost:4200
 this problem will not occur.
 
 ## TODO
