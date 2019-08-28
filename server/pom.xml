@@ -18,9 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <dependency-check-maven.version>3.1.2</dependency-check-maven.version>
-        <!-- CVE-2017-5929 -->
-        <logback.version>1.2.3</logback.version>
+        <dependency-check-maven.version>5.2.1</dependency-check-maven.version>
     </properties>
 
     <dependencies>
@@ -51,8 +49,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
+            <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

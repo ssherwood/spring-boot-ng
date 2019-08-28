@@ -57,11 +57,21 @@ To fix this issue, perform a `mvn package` on the client and restart the
 application.  NOTE: if you run the frontend via node (usually recommended) and use http://localhost:4200
 this problem will not occur.
 
+### IntelliJ doesn't detect the Angular submodule
+
+When you first Import the project if you pick the root pom.xml to import it sometimes does not autodetect
+the Angular CLI and doesn't auto configure the server runner.  To work around this, delete the .idea folder
+reimport the project just using the root folder. 
+
 ## TODO
 
+- Figure out if you can build dev and prod JARs of the client (use Maven scopes?)
 - Add UI routing
 - Add support for Bootstrap
 - Add a sample frontend -> backend call
 - Add Spring Data example
 - Add Spring Security using OAuth2
 - 
+
+
+`ng new -g --routing --style=scss ng-app`
