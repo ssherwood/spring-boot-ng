@@ -17,10 +17,10 @@
   <name>Angular Client</name>
 
   <properties>
-    <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
-    <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
-    <frontend-maven-plugin.version>1.8.0</frontend-maven-plugin.version>
-    <nodejs.version>v10.16.3</nodejs.version>
+    <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
+    <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
+    <frontend-maven-plugin.version>1.10.3</frontend-maven-plugin.version>
+    <nodejs.version>v14.14.0</nodejs.version>
     <yarn.version>v1.17.3</yarn.version>
     <outDir>dist</outDir>
   </properties>
@@ -123,7 +123,7 @@
               <outputDirectory>${project.build.outputDirectory}/static</outputDirectory>
               <resources>
                 <resource>
-                  <directory>${outDir}/ng-app</directory>
+                  <directory>${outDir}/spring-boot-ng</directory>
                 </resource>
               </resources>
             </configuration>
